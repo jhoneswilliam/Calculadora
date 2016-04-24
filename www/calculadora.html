@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR" ng-app="calculadora">
+	<head>
+    	<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>Calculadora</title>
+    	<link href="css/bootstrap.min.css" rel="stylesheet">
+    	<link href="css/style.css" rel="stylesheet">
+  	</head>
+  	<body ng-controller="calculadoraCtrl">  	
+  		<form name="calculadoraForm">
+		    <div class="jumbotron">
+		    	<h1 class="titulo">Calculadora</h1>
+		    	<p class="subtitulo"> by Reynaldo Marinho</p>
+		    	<form class="form">
+		    		<div class="tela">
+					    <input type="text" id="tela" class="form-control" style="cursor:default" name="expressao"></input>
+		    		</div>
+		    		<a class="btnLimpar btn btn-info" id="Limpar" href="#" role="button">C</a>
+		    		<div class="region">
+		    			<a class="btnExcluir btn btn-danger" id="Excluir" href="#" role="button">Excluir</a>
+		    		</div>
+		    		<div class="linhaUm">
+			    		<a class="teclas numero btn btn-default" ng-click="novoNumero(7)" href="#" role="button">7</a>
+			    		<a class="teclas numero btn btn-default" ng-click="novoNumero(8)" href="#" role="button">8</a>
+						<a class="teclas numero btn btn-default" ng-click="novoNumero(9)" href="#" role="button">9</a>
+			    		<a class="teclas btn btn-primary" ng-click="novoOperador('/')" href="#" role="button">/</a>
+			    	</div>
+			    	<div class="linhaDois">
+						<a class="teclas numero btn btn-default" ng-click="novoNumero(4)" href="#" role="button">4</a>
+						<a class="teclas numero btn btn-default" ng-click="novoNumero(5)" href="#" role="button">5</a>
+						<a class="teclas numero btn btn-default" ng-click="novoNumero(6)" href="#" role="button">6</a>
+						<a class="teclas btn btn-primary" ng-click="novoOperador('*')" href="#" role="button">*</a>
+					</div>
+					<div class="linhaTres">
+						<a class="teclas numero btn btn-default" ng-click="novoNumero(1)"  href="#" role="button">1</a>
+						<a class="teclas numero btn btn-default" ng-click="novoNumero(2)" href="#" role="button">2</a>
+						<a class="teclas numero btn btn-default" ng-click="novoNumero(3)" href="#" role="button">3</a>
+						<a class="teclas btn btn-primary" ng-click="novoOperador('+')" href="#" role="button">+</a>
+					</div>
+					<div class="linhaQuatro">
+						<a class="teclas btn btn-warning" ng-click="novoOperador('.')" href="#" role="button">.</a>
+						<a class="teclas numero btn btn-default" ng-click="novoNumero(0)" href="#" role="button">0</a>
+						<a class="teclas btn btn-warning" ng-click="resultado()" href="#" role="button">=</a>
+						<a class="teclas btn btn-primary" ng-click="novoOperador('-')" href="#" role="button">-</a>
+					</div>
+		    	</form>
+		    </div>    
+		</form>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/angular.js"></script>
+	    <script src="js/bootstrap.min.js"></script>
+	    <script src="js/calculadora.js"></script>
+  	</body>
+</html>
